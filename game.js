@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
     {
         question: "What is the capital city of Taiwan?",
         options: ["Kaohsiung", "Taipei", "Taichung", "Tainan"],
@@ -28,53 +28,32 @@ const questions = [
 
 let score = 0;
 let currentQuestion = 0;
+let stars = [];
 
-function startGame() {
-    score = 0;
-    currentQuestion = 0;
-    document.getElementById("result").innerText = "";
-    showQuestion();
+function setup() {
+    createCanvas(800, 600);
+    textAlign(CENTER, CENTER);
+    textSize(20);
+
+    // Generate stars
+    for (let i = 0; i < 50; i++) {
+        stars.push({ x: random(width), y: random(height), size: random(2, 6) });
+    }
 }
 
-function showQuestion() {
+function draw() {
+    background(30);
+
+    // Draw animated stars
+    for (let s of stars) {
+        fill(255, 255, 100);
+        ellipse(s.x, s.y, s.size);
+        s.y += random(0.5, 1.5);
+        if (s.y > height) s.y = 0;
+    }
+
     if (currentQuestion < questions.length) {
-        const q = questions[currentQuestion];
-        document.getElementById("question").innerText = q.question;
-        const buttons = document.getElementById("options");
-        buttons.innerHTML = "";
-        
-        q.options.forEach((option, index) => {
-            const button = document.createElement("button");
-            button.innerText = option;
-            button.onclick = () => checkAnswer(index);
-            buttons.appendChild(button);
-        });
+        showQuestion();
     } else {
         showResult();
     }
-}
-
-function checkAnswer(selected) {
-    if (selected === questions[currentQuestion].answer) {
-        score++;
-    }
-    currentQuestion++;
-    showQuestion();
-}
-
-function showResult() {
-    let resultText = "";
-    
-    if (score === 5) {
-        resultText = "🌟 Taiwan Expert! You know Taiwan very well!";
-    } else if (score >= 3) {
-        resultText = "😊 Taiwan Enthusiast! You know quite a bit about Taiwan!";
-    } else {
-        resultText = "🤔 Keep Learning! There's still more to explore about Taiwan!";
-    }
-
-    document.getElementById("result").innerText = resultText;
-}
-
-// Start game on load
-window.onload = startGame;
