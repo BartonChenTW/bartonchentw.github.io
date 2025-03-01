@@ -8,7 +8,7 @@ let questions = [
     },
     {
         question: "Which famous mountain is the highest in Taiwan?",
-        options: ["Alishan", "Hehuanshan", "Yushan", "Jade Mountain"],
+        options: ["Alishan", "Hehuanshan", "Yushan", "Golden Mountain"],
         answer: 2
     },
     {
@@ -17,14 +17,14 @@ let questions = [
         answer: 1
     },
     {
-        question: "Which traditional food is famous in Taiwan?",
+        question: "Which food is famous in Taiwan?",
         options: ["Pho", "Kimchi", "Bubble Tea", "Sushi"],
         answer: 2
     },
     {
-        question: "Which Taiwanese city is famous for its night markets?",
-        options: ["Hsinchu", "Kaohsiung", "Taipei", "Taitung"],
-        answer: 2
+        question: "Which Taiwanese city is famous for its street food and night markets?",
+        options: ["Hsinchu", "Kaohsiung", "Taipei", "Tainan"],
+        answer: 3
     }
 ];
 
