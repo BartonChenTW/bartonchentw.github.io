@@ -56,7 +56,7 @@ let questions = [
 ];
 
 let score = 0;
-let currentQuestion = -1;
+let currentQuestion = - coaching = -1;
 let showExplanation = true;
 let stars = [];
 
@@ -155,13 +155,25 @@ function showResult() {
     text(resultText, width / 2, height / 2);
 }
 
+function nextQuestion() {
+    console.log("Advancing to question", currentQuestion + 1);
+    currentQuestion++;
+    showExplanation = false;
+    redraw();
+}
+
 function mousePressed() {
+    console.log("Mouse pressed, currentQuestion:", currentQuestion, "showExplanation:", showExplanation);
     if (currentQuestion === -1) {
         currentQuestion = 0;
+        redraw();
         return;
     }
 
-    if (showExplanation) return;
+    if (showExplanation) {
+        console.log("Click ignored during explanation");
+        return;
+    }
 
     if (currentQuestion < questions.length) {
         let q = questions[currentQuestion];
@@ -170,12 +182,10 @@ function mousePressed() {
             let y = 160 + i * 60;
 
             if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
+                console.log("Option", i, "selected");
                 if (i === q.answer) score++;
                 showExplanation = true;
-                setTimeout(() => {
-                    currentQuestion++;
-                    showExplanation = false;
-                }, 2500);
+                setTimeout(nextQuestion, 2500);
                 break;
             }
         }
