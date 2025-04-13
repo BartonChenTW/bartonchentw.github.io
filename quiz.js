@@ -57,7 +57,7 @@ let questions = [
 
 let score = 0;
 let currentQuestion = -1;
-let showExplanation = false;
+let showExplanation = true;
 let stars = [];
 
 function setup() {
