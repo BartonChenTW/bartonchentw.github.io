@@ -104,20 +104,21 @@ function showQuestion() {
 
     fill(255);
     textSize(20);
-    text(q.question, width / 2, 100);
+    text(q.question, width / 2, 80);
 
     for (let i = 0; i < q.options.length; i++) {
         let x = width / 2;
-        let y = 180 + i * 60;
+        let y = 160 + i * 60;
 
+        // Option box style
         if (!showExplanation) {
             if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
-                fill(255, 180, 100);
+                fill(255, 180, 100); // hover
             } else {
                 fill(200);
             }
         } else {
-            fill(i === q.answer ? 'lightgreen' : 100);
+            fill(i === q.answer ? 'lightgreen' : '#666'); // highlight correct one
         }
 
         rect(x - 100, y - 20, 200, 40, 10);
@@ -126,9 +127,15 @@ function showQuestion() {
     }
 
     if (showExplanation) {
+        // Semi-transparent box for explanation
+        fill(0, 180);
+        rect(50, height - 160, width - 100, 100, 15);
+
         fill(255);
         textSize(16);
-        text(q.explanation, width / 2, height - 100, 700);
+        textAlign(CENTER, TOP);
+        text(q.explanation, width / 2, height - 140, width - 120);
+        textAlign(CENTER, CENTER); // Reset to default
     }
 }
 
