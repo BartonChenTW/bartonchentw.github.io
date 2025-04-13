@@ -3,86 +3,62 @@ let questions = [
         question: "（暖身題）我們可以以臺灣人身份申請下列哪一國際組織？",
         options: ["UNDP", "WHO", "WTO", "WHAT"],
         answer: 2,
-        explanation: "✅ 正解是 WTO：有台灣人在WTO工作，例如 Jessica。"
+        explanation: "有台灣人在 WTO 工作，例如 Jessica！"
     },
     {
-        question: "（暖身題）以下何者為臺灣目前在世界貿易組織(WTO)中的稱呼？",
+        question: "（暖身題）以下何者為臺灣目前在 WTO 中的稱呼？",
         options: ["中華民國", "中華民國台灣", "中國台灣", "臺灣、澎湖、金門、馬祖個別關稅領域"],
         answer: 3,
-        explanation: "✅ 正解是 D：因為WTO的會員是經濟體而不是主權國家。"
+        explanation: "WTO 是以經濟體為單位，不是以國家為單位。"
     },
     {
         question: "（暖身題）臺灣目前是哪些國際組織的成員？",
-        options: [
-            "FFTC, Global Coalition to Defeat ISIS, IATTC",
-            "OECD, NATO, RATP",
-            "OSCE, IOM, Eurovision",
-            "BRICS, ILO, MLB"
-        ],
+        options: ["FFTC, Global Coalition to Defeat ISIS, IATTC", "OECD, NATO, RATP", "OSCE, IOM, Eurovision", "BRICS, ILO, MLB"],
         answer: 0,
-        explanation: "✅ 正解是 A：我們是 FFTC、反制ISIS聯盟、IATTC 的成員。"
+        explanation: "FFTC、IATTC、全球反 ISIS 聯盟都是臺灣有參與的組織！"
     },
     {
-        question: "收到聯合國實習錄取卻被告知臺灣人無法入職，這時我該：",
-        options: [
-            "抗議不公，人家是Stateless",
-            "抗議不公，這樣根本違反人權",
-            "拍拍屁股，自認倒楣去申請其他機會"
-        ],
+        question: "收到聯合國實習錄取好開心，但主管說臺灣人無法入職，我該？",
+        options: ["抗議：Stateless！", "抗議：違反人權！", "拍拍屁股，自認倒霉"],
         answer: 2,
-        explanation: "✅ 正解是 C：這是現實狀況，講者會分享經驗。"
+        explanation: "這是陳霓的經歷，她最後選擇轉向其他機會。"
     },
     {
-        question: "聯合國要求填國籍，應該填China以免Offer被收回？",
-        options: ["委屈求全填China", "Offer會被收回"],
+        question: "聯合國錄取了，但填資料時國籍只能填 China，否則會被取消？",
+        options: ["填 China 入職", "Offer 被收回"],
         answer: 1,
-        explanation: "✅ 正解是 B：我們拿不出中國護照，會被取消錄取。"
+        explanation: "我們沒有中國護照，無法完成入職程序。cue 欣妍"
     },
     {
-        question: "為保險起見，填Taiwan, Republic of China_____:",
-        options: [
-            "還是不行sorry",
-            "那就沒問題",
-            "應該沒問題"
-        ],
+        question: "我填了 Taiwan, Republic of China_____ 這樣比較保險？",
+        options: ["還是不行", "那就沒問題", "應該沒問題"],
         answer: 2,
-        explanation: "✅ 正解是 C：根據UNOG實習者經驗，有時可以。"
+        explanation: "以峰懋的經驗，有時是可行的，但沒保證。"
     },
     {
-        question: "馬來西亞駐台辦事處給的入職證明上把我國籍寫China，這時我會：",
-        options: [
-            "寫信跟聯合國吵架",
-            "跟馬來西亞駐台辦事處解釋",
-            "回家去跟城隍爺拜拜"
-        ],
+        question: "馬來西亞駐台辦事處拿到的入職證明上寫我國籍是 China，我應該？",
+        options: ["寫信吵架", "解釋給辦事處聽", "回家拜拜"],
         answer: 2,
-        explanation: "✅ 正解是 C：講者會解釋，心平氣和處理。"
+        explanation: "這是陳霓的經歷，她只能祈求平安順利。"
     },
     {
-        question: "主管想幫你升職為Staff合約，你會：",
-        options: [
-            "啊我當然要拿合約要不然？",
-            "沒關係我繼續拿顧問的合約也很好"
-        ],
+        question: "擔任聯合國顧問合約快到期，主管要幫升職成 Staff，我該？",
+        options: ["當然升職啊！", "繼續顧問，不麻煩主管"],
         answer: 1,
-        explanation: "✅ 正解是 B：正式合約須送總部，風險高。"
+        explanation: "升職可能需要通報總部，被發現是台灣人會出問題。cue 昱翔 & Jack"
     },
     {
-        question: "收到回覆：你表現很棒，但請確認是否有聯合國會員國國籍。",
-        options: [
-            "委屈巴巴拭淚理性解釋爭取",
-            "義憤填膺寫信控訴罵人",
-            "走投無路回覆是中國公民並提供台胞證"
-        ],
+        question: "收到回覆：你表現很好，但台灣不被承認。你會？",
+        options: ["理性解釋爭取", "寫信罵人", "假裝中國公民"],
         answer: 0,
-        explanation: "✅ 正解是 A：保持冷靜，理性回覆是關鍵。"
+        explanation: "這是家瑋的經歷，他選擇耐心解釋。"
     }
 ];
 
 let score = 0;
 let currentQuestion = -1;
-let stars = [];
 let showExplanation = false;
+let stars = [];
 
 function setup() {
     createCanvas(800, 600);
@@ -116,11 +92,11 @@ function draw() {
 function showIntro() {
     fill(255);
     textSize(24);
-    text("台灣與國際參與小測驗", width / 2, height / 2 - 40);
+    text("🌟 歡迎來到《臺灣人與國際組織》互動問答遊戲！", width / 2, height / 2 - 80);
     textSize(18);
-    text("點擊畫面開始！", width / 2, height / 2 + 10);
+    text("前面是暖身題，後面是講者真實經歷改編的問答：\n\n就是除了暖身題以外的題目都沒有遇到這些情況的「正確答案」，\n只是邀請大家猜猜看我們講者親身的經歷！", width / 2, height / 2 + 20);
     textSize(16);
-    text("就是除了暖身題以外的題目都沒有遇到這些情況的「正確答案」，\n只是邀請大家猜猜看我們講者親身的經歷。", width / 2, height / 2 + 80, 600);
+    text("👉 點一下開始遊戲", width / 2, height - 60);
 }
 
 function showQuestion() {
@@ -128,17 +104,22 @@ function showQuestion() {
 
     fill(255);
     textSize(20);
-    text(q.question, width / 2, 80);
+    text(q.question, width / 2, 100);
 
     for (let i = 0; i < q.options.length; i++) {
         let x = width / 2;
         let y = 180 + i * 60;
 
-        if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
-            fill(255, 180, 100);
+        if (!showExplanation) {
+            if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
+                fill(255, 180, 100);
+            } else {
+                fill(200);
+            }
         } else {
-            fill(200);
+            fill(i === q.answer ? 'lightgreen' : 100);
         }
+
         rect(x - 100, y - 20, 200, 40, 10);
         fill(0);
         text(q.options[i], x, y);
@@ -147,19 +128,19 @@ function showQuestion() {
     if (showExplanation) {
         fill(255);
         textSize(16);
-        text(q.explanation, width / 2, height - 60, 700);
+        text(q.explanation, width / 2, height - 100, 700);
     }
 }
 
 function showResult() {
     let resultText = "";
 
-    if (score === questions.length) {
-        resultText = "🌟 台灣參與國際專家！你太厲害了！";
-    } else if (score >= questions.length / 2) {
-        resultText = "😊 台灣參與國際知識不錯！";
+    if (score >= 8) {
+        resultText = "🌟 台灣國際通！你對台灣與國際事務很熟悉！";
+    } else if (score >= 5) {
+        resultText = "😊 還不錯喔！你對台灣的國際挑戰有一定了解！";
     } else {
-        resultText = "🤔 繼續努力～ 還有很多可以學的喔！";
+        resultText = "🤔 沒關係，我們一起繼續學習更多台灣的故事！";
     }
 
     fill(255);
@@ -173,11 +154,7 @@ function mousePressed() {
         return;
     }
 
-    if (showExplanation) {
-        currentQuestion++;
-        showExplanation = false;
-        return;
-    }
+    if (showExplanation) return;
 
     if (currentQuestion < questions.length) {
         let q = questions[currentQuestion];
@@ -188,6 +165,10 @@ function mousePressed() {
             if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
                 if (i === q.answer) score++;
                 showExplanation = true;
+                setTimeout(() => {
+                    currentQuestion++;
+                    showExplanation = false;
+                }, 2500);
                 break;
             }
         }
