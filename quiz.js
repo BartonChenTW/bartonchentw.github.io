@@ -167,7 +167,7 @@ function mousePressed() {
         let q = questions[currentQuestion];
         for (let i = 0; i < q.options.length; i++) {
             let x = width / 2;
-            let y = 180 + i * 60;
+            let y = 160 + i * 60;
 
             if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
                 if (i === q.answer) score++;
