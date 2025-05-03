@@ -111,7 +111,7 @@ function showQuestion() {
         let y = 180 + i * 60;
 
         if (!showExplanation) {
-            if (mouseX > x - 100 && mouseX < x + 100 && mouseY > y - 20 && mouseY < y + 20) {
+            if (mouseX > x - 220 && mouseX < x + 220 && mouseY > y - 20 && mouseY < y + 20) { // Slightly increased width
                 fill(255, 180, 100);
             } else {
                 fill(200);
@@ -120,7 +120,7 @@ function showQuestion() {
             fill(i === q.answer ? 'lightgreen' : 100);
         }
 
-        rect(x - 100, y - 20, 200, 40, 10);
+        rect(x - 220, y - 20, 440, 40, 10); // Slightly increased width
         fill(0);
         text(q.options[i], x, y);
     }
@@ -128,7 +128,7 @@ function showQuestion() {
     if (showExplanation) {
         fill(255);
         textSize(16);
-        text(q.explanation, width / 2, height - 100, 700);
+        text(q.explanation, width / 2, height - 100, 850); // Slightly increased width for explanation
     }
 }
 
