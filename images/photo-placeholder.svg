@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Photo placeholder">
+  <rect width="400" height="400" fill="#172220"/>
+  <circle cx="200" cy="155" r="64" fill="#2a3834"/>
+  <path d="M72 360c0-72 57-118 128-118s128 46 128 118z" fill="#2a3834"/>
+  <text x="200" y="392" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#98a8a3">replace with images/photo.jpg</text>
+</svg>
