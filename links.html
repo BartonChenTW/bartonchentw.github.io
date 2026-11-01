@@ -3,19 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8f6">
+  <meta name="theme-color" content="#0f1614">
   <meta name="description" content="Links and profiles for Yi-Chung Barton Chen, energy systems researcher at Empa.">
   <title>Yi-Chung Barton Chen — Links</title>
   <style>
     :root {
-      color-scheme: light;
-      --paper: #f7f8f6;
-      --surface: #fff;
-      --ink: #202a28;
-      --muted: #64716e;
-      --line: #e1e7e3;
-      --accent: #286d5d;
-      --accent-dark: #1c5145;
+      color-scheme: dark;
+      --paper: #0f1614;
+      --surface: #172220;
+      --ink: #e4ebe8;
+      --muted: #98a8a3;
+      --line: #2a3834;
+      --accent: #6fbfa6;
+      --accent-dark: #8fd1ba;
+      --muted-2: #a9b8b3;
+      --line-soft: #22302c;
+      --tint: #1d2f2a;
+      --ring: #6fbfa6;
+      --line-strong: #3a4f48;
       --serif: Georgia, "Times New Roman", serif;
       --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
     }
@@ -34,7 +39,7 @@
     }
 
     a { color: inherit; }
-    a:focus-visible { outline: 3px solid #78a99b; outline-offset: 4px; }
+    a:focus-visible { outline: 3px solid var(--ring); outline-offset: 4px; }
 
     main {
       width: min(520px, calc(100% - 40px));
@@ -49,9 +54,9 @@
       height: 54px;
       margin-bottom: 25px;
       place-items: center;
-      border: 1px solid #c8d8cf;
+      border: 1px solid var(--line-strong);
       border-radius: 50%;
-      background: #eaf1ec;
+      background: var(--tint);
       color: var(--accent-dark);
       font: 400 20px var(--serif);
     }
@@ -73,7 +78,7 @@
 
     .subtitle {
       margin-bottom: 11px;
-      color: #43524e;
+      color: var(--muted-2);
       font-size: 14px;
       font-weight: 600;
     }
@@ -106,7 +111,7 @@
 
     .link-card:hover {
       transform: translateY(-2px);
-      border-color: #b7cfc4;
+      border-color: var(--line-strong);
     }
 
     .link-copy { display: grid; }

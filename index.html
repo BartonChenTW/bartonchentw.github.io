@@ -3,19 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8f6">
+  <meta name="theme-color" content="#0f1614">
   <meta name="description" content="Academic CV of Yi-Chung Barton Chen, Scientist for Energy Systems Modelling at Empa.">
   <title>Academic CV — Yi-Chung Barton Chen</title>
   <style>
     :root {
-      color-scheme: light;
-      --paper: #f7f8f6;
-      --surface: #fff;
-      --ink: #202a28;
-      --muted: #64716e;
-      --line: #e1e7e3;
-      --accent: #286d5d;
-      --accent-dark: #1c5145;
+      color-scheme: dark;
+      --paper: #0f1614;
+      --surface: #172220;
+      --ink: #e4ebe8;
+      --muted: #98a8a3;
+      --line: #2a3834;
+      --accent: #6fbfa6;
+      --accent-dark: #8fd1ba;
+      --muted-2: #a9b8b3;
+      --line-soft: #22302c;
+      --tint: #1d2f2a;
+      --ring: #6fbfa6;
+      --line-strong: #3a4f48;
       --serif: Georgia, "Times New Roman", serif;
       --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
     }
@@ -32,7 +37,7 @@
 
     a { color: var(--accent-dark); text-underline-offset: 3px; }
     a:hover { color: var(--accent); }
-    a:focus-visible { outline: 3px solid #78a99b; outline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
     h1, h2, h3, p { margin-top: 0; }
 
     .skip-link {
@@ -42,7 +47,7 @@
       z-index: 3;
       padding: 8px 12px;
       transform: translateY(-160%);
-      background: white;
+      background: var(--surface);
     }
 
     .skip-link:focus { transform: translateY(0); }
@@ -143,7 +148,7 @@
     .summary {
       max-width: 720px;
       margin-bottom: 0;
-      color: #53615e;
+      color: var(--muted-2);
       font-size: 14px;
     }
 
@@ -164,7 +169,7 @@
       grid-template-columns: 138px minmax(0, 1fr);
       gap: 20px;
       padding-block: 14px;
-      border-top: 1px solid #e9edea;
+      border-top: 1px solid var(--line-soft);
     }
 
     .entry:first-of-type { border-top: 0; padding-top: 0; }
@@ -191,7 +196,7 @@
 
     .entry p, .entry ul {
       margin-bottom: 0;
-      color: #4f5c58;
+      color: var(--muted-2);
       font-size: 12px;
     }
 
@@ -203,7 +208,7 @@
 
     .publication {
       padding-block: 11px;
-      border-top: 1px solid #e9edea;
+      border-top: 1px solid var(--line-soft);
       font-size: 12px;
       line-height: 1.65;
     }
@@ -225,7 +230,7 @@
       gap: 7px;
       margin: 0;
       padding-left: 17px;
-      color: #4f5c58;
+      color: var(--muted-2);
       font-size: 12px;
     }
 
@@ -237,7 +242,7 @@
     }
 
     .skills-grid strong { font-weight: 700; }
-    .skills-grid span { color: #4f5c58; }
+    .skills-grid span { color: var(--muted-2); }
     .cv-footer {
       display: flex;
       justify-content: space-between;
@@ -263,7 +268,7 @@
     }
 
     @media print {
-      :root { --paper: #fff; --surface: #fff; --ink: #111; --muted: #444; --line: #bbb; }
+      :root { --paper: #fff; --surface: #fff; --ink: #111; --muted: #444; --muted-2: #444; --line: #bbb; --line-soft: #ddd; --accent-dark: #1c5145; --tint: #fff; --line-strong: #bbb; }
       body { background: white; font-size: 10pt; }
       .topbar, .contents-heading, .contents, .skip-link { display: none; }
       .page { display: block; width: auto; margin: 0; }
