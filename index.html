@@ -87,6 +87,18 @@
       padding-top: 6px;
     }
 
+    .portrait {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 4 / 5;
+      margin-bottom: 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      object-fit: cover;
+      object-position: 90% 50%;
+    }
+
     .sidebar-name {
       margin-bottom: 8px;
       font: 400 21px/1.25 var(--serif);
@@ -273,6 +285,7 @@
       .topbar, .contents-heading, .contents, .skip-link { display: none; }
       .page { display: block; width: auto; margin: 0; }
       .sidebar { position: static; margin-bottom: 20px; }
+      .portrait { display: none; }
       .sidebar-name { font-size: 14pt; }
       .contact-list { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 10px; }
       .cv-header { padding-bottom: 15px; }
@@ -299,6 +312,7 @@
 
   <div class="page">
     <aside class="sidebar" aria-label="Contact and page navigation">
+      <img class="portrait" src="images/Barton_glacier.jpg" alt="Yi-Chung Barton Chen in front of the Aletsch Glacier" width="880" height="1100" decoding="async">
       <p class="sidebar-name">Yi-Chung Barton Chen</p>
       <p class="sidebar-role">Scientist for Energy Systems Modelling<br>Empa · Switzerland</p>
       <ul class="contact-list">
