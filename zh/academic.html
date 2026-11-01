@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1614">
+  <meta name="description" content="Yi-Chung Barton Chen 的學術履歷，Empa 能源系統建模科學家。">
+  <title>學術履歷 — Yi-Chung Barton Chen</title>
+  <link rel="alternate" hreflang="en" href="../academic.html">
+  <link rel="alternate" hreflang="zh-Hant" href="academic.html">
+  <style>
+    :root {
+      color-scheme: dark;
+      --paper: #0f1614;
+      --surface: #172220;
+      --ink: #e4ebe8;
+      --muted: #98a8a3;
+      --line: #2a3834;
+      --accent: #6fbfa6;
+      --accent-dark: #8fd1ba;
+      --muted-2: #a9b8b3;
+      --line-soft: #22302c;
+      --tint: #1d2f2a;
+      --ring: #6fbfa6;
+      --line-strong: #3a4f48;
+      --serif: Georgia, "Times New Roman", "Noto Serif TC", "PMingLiU", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 15px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-dark); text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+    h1, h2, h3, p { margin-top: 0; }
+
+    .skip-link {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      z-index: 3;
+      padding: 8px 12px;
+      transform: translateY(-160%);
+      background: var(--surface);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .topbar {
+      display: flex;
+      width: min(1120px, calc(100% - 48px));
+      min-height: 66px;
+      align-items: center;
+      justify-content: space-between;
+      margin-inline: auto;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--accent); }
+    .top-actions { display: flex; align-items: center; gap: 18px; }
+    .top-link { font-size: 12px; text-decoration: none; }
+
+    .page {
+      display: grid;
+      width: min(1120px, calc(100% - 48px));
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 68px;
+      align-items: start;
+      margin: 58px auto 80px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 28px;
+      padding-top: 6px;
+    }
+
+    .portrait {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 4 / 5;
+      margin-bottom: 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      object-fit: cover;
+      object-position: 90% 50%;
+    }
+
+    .sidebar-name {
+      margin-bottom: 8px;
+      font: 400 21px/1.25 var(--serif);
+    }
+
+    .sidebar-role {
+      margin-bottom: 21px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .contact-list, .contents {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list { margin-bottom: 29px; }
+
+    .contact-list a, .contact-list span {
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
+
+    .contents-heading, .kicker {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .contents { gap: 4px; }
+    .contents a {
+      color: var(--muted);
+      font-size: 11px;
+      text-decoration: none;
+    }
+
+    .contents a:hover { color: var(--accent); }
+
+    .cv-header {
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cv-header .kicker { margin-bottom: 13px; }
+
+    h1 {
+      margin-bottom: 13px;
+      font: 400 clamp(38px, 5vw, 56px)/1.08 var(--serif);
+      letter-spacing: -.04em;
+    }
+
+    .summary {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: var(--muted-2);
+      font-size: 14px;
+    }
+
+    .section {
+      padding-block: 27px 24px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 24px;
+    }
+
+    .section-title {
+      margin-bottom: 19px;
+      font: 400 25px/1.2 var(--serif);
+      letter-spacing: -.02em;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 138px minmax(0, 1fr);
+      gap: 20px;
+      padding-block: 14px;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .entry:first-of-type { border-top: 0; padding-top: 0; }
+    .entry:last-child { padding-bottom: 0; }
+
+    .date {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .entry h3 {
+      margin-bottom: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .organization {
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .entry p, .entry ul {
+      margin-bottom: 0;
+      color: var(--muted-2);
+      font-size: 12px;
+    }
+
+    .entry ul {
+      display: grid;
+      gap: 4px;
+      padding-left: 17px;
+    }
+
+    .publication {
+      padding-block: 11px;
+      border-top: 1px solid var(--line-soft);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .publication:first-of-type { border-top: 0; padding-top: 0; }
+    .publication:last-child { padding-bottom: 0; }
+    .publication p { margin-bottom: 0; }
+
+    .subheading {
+      margin: 18px 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .subheading:first-of-type { margin-top: 0; }
+
+    .compact-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding-left: 17px;
+      color: var(--muted-2);
+      font-size: 12px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 10px 20px;
+      font-size: 12px;
+    }
+
+    .skills-grid strong { font-weight: 700; }
+    .skills-grid span { color: var(--muted-2); }
+    .cv-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    @media (max-width: 760px) {
+      .page { grid-template-columns: 1fr; gap: 34px; margin-top: 35px; }
+      .sidebar { position: static; }
+      .contents { display: flex; flex-wrap: wrap; gap: 6px 15px; }
+      .contact-list { display: flex; flex-wrap: wrap; gap: 5px 16px; margin-bottom: 20px; }
+    }
+
+    @media (max-width: 520px) {
+      .topbar, .page { width: calc(100% - 36px); }
+      .entry { grid-template-columns: 1fr; gap: 3px; }
+      .skills-grid { grid-template-columns: 1fr; gap: 3px; }
+      .skills-grid span { margin-bottom: 9px; }
+      .cv-footer { flex-direction: column; }
+    }
+
+    @media print {
+      :root { --paper: #fff; --surface: #fff; --ink: #111; --muted: #444; --muted-2: #444; --line: #bbb; --line-soft: #ddd; --accent-dark: #1c5145; --tint: #fff; --line-strong: #bbb; }
+      body { background: white; font-size: 10pt; }
+      .topbar, .contents-heading, .contents, .skip-link { display: none; }
+      .page { display: block; width: auto; margin: 0; }
+      .sidebar { position: static; margin-bottom: 20px; }
+      .portrait { display: none; }
+      .sidebar-name { font-size: 14pt; }
+      .contact-list { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 10px; }
+      .cv-header { padding-bottom: 15px; }
+      h1 { font-size: 25pt; }
+      .section { padding-block: 14px; break-inside: avoid; }
+      .section-title { font-size: 16pt; }
+      .entry, .publication { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; overflow-wrap: anywhere; }
+      .cv-footer { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="topbar">
+    <a class="brand" href="index.html">Barton <span>Chen</span></a>
+    <div class="top-actions">
+      <a class="top-link" href="index.html">簡易個人頁與連結 →</a>
+      <a class="top-link" href="../academic.html" hreflang="en" lang="en">English</a>
+    </div>
+  </header>
+
+  <div class="page">
+    <aside class="sidebar" aria-label="聯絡方式與頁面導覽">
+      <img class="portrait" src="../images/Barton_glacier.jpg" alt="Yi-Chung Barton Chen 站在阿萊奇冰川前" width="880" height="1100" decoding="async">
+      <p class="sidebar-name">Yi-Chung Barton Chen</p>
+      <p class="sidebar-role">能源系統建模科學家<br>Empa · 瑞士</p>
+      <ul class="contact-list">
+        <li><a href="mailto:barton.chen.energy@gmail.com">barton.chen.energy@gmail.com</a></li>
+        <li><a href="https://www.empa.ch/web/chyi" target="_blank" rel="noopener noreferrer">Empa 個人頁面</a></li>
+        <li><a href="https://www.linkedin.com/in/bartonchen/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://orcid.org/0000-0002-1446-5840" target="_blank" rel="noopener noreferrer">ORCID: 0000-0002-1446-5840</a></li>
+        <li><a href="https://github.com/BartonChenTW" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p class="contents-heading">本頁內容</p>
+      <nav aria-label="履歷章節">
+        <ul class="contents">
+          <li><a href="#profile">簡介</a></li>
+          <li><a href="#appointments">任職</a></li>
+          <li><a href="#education">學歷</a></li>
+          <li><a href="#research">研究計畫</a></li>
+          <li><a href="#open-research">開放研究與軟體</a></li>
+          <li><a href="#publications">學術出版</a></li>
+          <li><a href="#presentations">學術報告</a></li>
+          <li><a href="#supervision">指導</a></li>
+          <li><a href="#awards">獎項</a></li>
+          <li><a href="#skills">技能與語言</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <header class="cv-header" id="profile">
+        <p class="kicker">學術履歷</p>
+        <h1>Yi-Chung Barton Chen</h1>
+        <p class="summary">
+          能源系統研究者，具化學工程與材料科學背景，並曾在英國與瑞士從事博士後研究。
+          在 Empa 都市能源系統實驗室，我主導從單一建物到全國尺度的能源系統建模。
+          目前的研究重點，是透過開放與 FAIR 的做法，把真實世界的能源資料整理成可供建模與 AI 使用的形式。
+        </p>
+      </header>
+
+      <section class="section" id="appointments" aria-labelledby="appointments-title">
+        <h2 class="section-title" id="appointments-title">任職與經歷</h2>
+        <article class="entry">
+          <div class="date">2023 年 7 月起<br>瑞士</div>
+          <div>
+            <h3>能源系統建模科學家</h3>
+            <p class="organization">Empa · 都市能源系統實驗室</p>
+            <ul>
+              <li>主持多項研究計畫中的能源系統建模與資料分析。</li>
+              <li>協助開發並整合建模工具，包括 ehubX、MANGO 與 CESAR-P。</li>
+              <li>統籌實驗室在 AI 解決方案方面的研究資源與活動。</li>
+              <li>開發能源建模所需的 AI 解決方案，包括 LLM 輔助資料處理、AI-ready 資料與基礎模型。</li>
+            </ul>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2021–2023<br>英國</div>
+          <div>
+            <h3>博士後研究員</h3>
+            <p class="organization">埃克塞特大學 (University of Exeter) · 再生能源研究組</p>
+            <p>主導開發浮式離岸風電的生命週期模擬與評估工具；研究風電用於電力，以及氫、氨等能源載體的路徑。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2010–2015<br>台灣</div>
+          <div>
+            <h3>系統工程師暨製程支援工程師</h3>
+            <p class="organization">應用材料公司 (Applied Materials Inc.)</p>
+            <p>為太陽能電池製造用 Solion XP 離子佈植機的新產品開發與測試，提供製程與技術支援。協助評估與第一代佈植機量產，促成該事業部在亞洲的第一個 Solion XP 商機。2014 與 2015 年連續獲得事業部特別獎。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2009–2010<br>台灣</div>
+          <div>
+            <h3>研究助理</h3>
+            <p class="organization">國立成功大學 · 製程系統工程實驗室</p>
+            <p>發展以 Petri 網與自動機為基礎的批次製程故障診斷方法，包括 Delphi 程式 Diagnoser Builder；亦研究多工廠熱整合的賽局理論最佳化。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2008<br>台灣</div>
+          <div>
+            <h3>義務役兵役</h3>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title">學歷</h2>
+        <article class="entry">
+          <div class="date">2016–2021</div>
+          <div>
+            <h3>化學工程博士</h3>
+            <p class="organization">伯明罕大學 (University of Birmingham)，英國 · 2021 年 2 月</p>
+            <p>論文：<em>Direct wind-to-heat energy systems integrated with storage for electricity and heat generation.</em></p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2003–2007</div>
+          <div>
+            <h3>化學工程與材料科學學士</h3>
+            <p class="organization">元智大學，台灣</p>
+            <p>因 2006–2007 學年在 53 位學生中排名第二 (GPA 3.94/4.0)，獲頒 Wellan-System 獎學金。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <h2 class="section-title" id="research-title">研究計畫選介</h2>
+        <article class="entry">
+          <div class="date">2023–2025<br>城市尺度</div>
+          <div>
+            <h3>DigiFrauenfeld</h3>
+            <p>整理並分析 20,000 多筆電力、天然氣與熱能電表時間序列。比較模擬需求與實測資料；成果納入 <em>Energy Perspectives Frauenfeld 2050</em> (2025)，供該市能源總體規劃使用。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2023–2025<br>區域尺度</div>
+          <div>
+            <h3>NCCR Automation Sisslerfeld</h3>
+            <p>協助資料準備，並為區域減碳研究開發數位孿生。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2024–2026<br>街區尺度</div>
+          <div>
+            <h3>Colouring Dübendorf</h3>
+            <p>主導區域減碳研究的執行，包括資料處理、平台開發、能源系統建模與新的建模方法。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2023–2024<br>建物群尺度</div>
+          <div>
+            <h3>瑞士聯邦建物組合 (BBL)</h3>
+            <p>主導資料處理、能源系統建模，並提出以關鍵績效指標為基礎、為建物組合制定淨零路徑的新方法。相關成果發表於 ECOS 2024。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2023–2026<br>區域尺度</div>
+          <div>
+            <h3>SWEET PATHFNDR · DeCarbCH</h3>
+            <p>協助 Losone 與 Brugg 的建模與資料分析，聚焦彈性調度與供暖減碳，涵蓋電動車資料、供暖系統、太陽能與電池整合。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2024 年起<br>全國尺度</div>
+          <div>
+            <h3>SWEET reFuel.ch</h3>
+            <p>開發瑞士能源系統建模中資料準備與整合所需的資料技術。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2025 年起<br>全國尺度</div>
+          <div>
+            <h3>瑞士風能研究</h3>
+            <p>指導一系列學生專案：ehubX 風能模組、風資料分群，以及瑞士風能研究。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2024–2026<br>資料與 AI</div>
+          <div>
+            <h3>techClass · LLM 資料擷取</h3>
+            <p>發起並主導開發一套開源工具，使用 GitHub Copilot 或本機 Ollama 模型，從 PDF 擷取結構化技術資料。</p>
+          </div>
+        </article>
+        <article class="entry">
+          <div class="date">2024–2026<br>能源技術資料</div>
+          <div>
+            <h3>MOTEL</h3>
+            <p>開發能源系統模型用的能源技術與載體開放資料庫之方法與平台，具備本體論 (ontology) 資料、可追溯的來源與 LLM 輔助比對。ETH 領域開放研究資料計畫。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="open-research" aria-labelledby="open-title">
+        <h2 class="section-title" id="open-title">開放科學、軟體與資料</h2>
+        <ul class="compact-list">
+          <li><strong>MOTEL：</strong>能源系統模型用的開放技術資料庫與平台，整合本體論並提供可追溯的參數。<a href="https://github.com/uesl-empa/motel-platform" target="_blank" rel="noopener noreferrer">GitHub</a>。</li>
+          <li><strong>FM4UES：</strong>作者，開放式持續更新的都市能源系統基礎模型文獻回顧。<a href="https://bartonchentw.github.io/FM4UES" target="_blank" rel="noopener noreferrer">專案網站</a>。</li>
+          <li><strong>瑞士能源系統資料：</strong>公開的開放資料集合，涵蓋從全國能源平衡到建物的資料。<a href="https://bartonchentw.github.io/Swiss-energy-system-data" target="_blank" rel="noopener noreferrer">專案網站</a>。</li>
+          <li><strong>techClass：</strong>開源 LLM 工具，用於從 PDF 擷取並分類技術資料。<a href="https://github.com/falbii/LLMtool_techClass" target="_blank" rel="noopener noreferrer">GitHub</a>。</li>
+          <li><strong>ehubX、MANGO 與 CESAR-P：</strong>協助維護與開發 ehubX，並為 MANGO 與 CESAR-P 的主要使用者。<a href="https://github.com/uesl-empa/ehubx" target="_blank" rel="noopener noreferrer">ehubX</a> · <a href="https://github.com/uesl-empa/cesar-p-core" target="_blank" rel="noopener noreferrer">CESAR-P</a>。</li>
+        </ul>
+      </section>
+
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <h2 class="section-title" id="publications-title">學術出版</h2>
+        <h3 class="subheading">同儕審查期刊論文</h3>
+        <div class="publication">
+          <p>Upadhyay, A. et al. (2026). “Charting the path to net-zero via CCS and urban-industrial system integration: a Swiss case study.” <em>Joule</em>. <a href="https://doi.org/10.1016/j.joule.2026.102533" target="_blank" rel="noopener noreferrer">doi:10.1016/j.joule.2026.102533</a>.</p>
+        </div>
+        <div class="publication">
+          <p>Koirala, B. et al. (2025). “Ten questions concerning the design of urban energy systems.” <em>Building and Environment</em>, 283, 113348. <a href="https://doi.org/10.1016/j.buildenv.2025.113348" target="_blank" rel="noopener noreferrer">doi:10.1016/j.buildenv.2025.113348</a>.</p>
+        </div>
+        <div class="publication">
+          <p>Feng, S. T., Chen, Y. C. &amp; Chang, C. T. (2019). “An automata based hybrid modeling approach to synthesize sequential diagnostic tests.” <em>Chemical Engineering Research and Design</em>, 145, 29–47. <a href="https://doi.org/10.1016/j.cherd.2019.02.033" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cherd.2019.02.033</a>.</p>
+        </div>
+        <div class="publication">
+          <p>Wang, C. J., Chen, Y. C., Feng, S. T. &amp; Chang, C. T. (2017). “Automata-based operating procedure for abnormal situation management in batch processes.” <em>Computers &amp; Chemical Engineering</em>, 97, 220–241. <a href="https://doi.org/10.1016/j.compchemeng.2016.11.042" target="_blank" rel="noopener noreferrer">doi:10.1016/j.compchemeng.2016.11.042</a>.</p>
+        </div>
+        <div class="publication">
+          <p>Chen, Y. C., Yeh, M. L., Hong, C. L. &amp; Chang, C. T. (2010). “A Petri-net based approach to configure on-line fault diagnosis systems for batch processes.” <em>Industrial &amp; Engineering Chemistry Research</em>, 49(9), 4249–4268. <a href="https://doi.org/10.1021/ie901410p" target="_blank" rel="noopener noreferrer">doi:10.1021/ie901410p</a>.</p>
+        </div>
+
+        <h3 class="subheading">會議論文</h3>
+        <div class="publication">
+          <p>Vulic, N., Chen, Y. C. et al. (2024). “Towards net zero pathways for building stock portfolios based on key performance indicators.” ECOS 2024, Rhodes, Greece. <a href="https://doi.org/10.52202/077185-0061" target="_blank" rel="noopener noreferrer">doi:10.52202/077185-0061</a>.</p>
+        </div>
+        <div class="publication">
+          <p>Humbert, G. et al. (2024). “Generation of a comprehensive database for energy technologies with emphasis on flexibility metrics.” SDEWES, Rome, Italy.</p>
+        </div>
+        <div class="publication">
+          <p>Chen, Y. C., Radcliffe, J. &amp; Ding, Y. (2019). “Concept of offshore direct wind-to-heat system integrated with thermal energy storage for decarbonizing heating.” Offshore Energy and Storage Summit, Brest, France. IEEE Xplore.</p>
+        </div>
+
+        <h3 class="subheading">報告與貢獻</h3>
+        <ul class="compact-list">
+          <li>Chen, Y. C. et al. (2022). <em>Low carbon vessel and energy vector analysis: integration of floating offshore wind.</em> CFA project report.</li>
+          <li>Contributor (2020). <em>Innovation outlook: thermal energy storage.</em> IRENA.</li>
+          <li>Radcliffe, J., Greaves, J., Heap, R. &amp; Chen, Y. C. (2020). <em>Immediate need for substantial investment in energy storage.</em> Energy Research Partnership.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="presentations" aria-labelledby="presentations-title">
+        <h2 class="section-title" id="presentations-title">學術報告選介</h2>
+        <ul class="compact-list">
+          <li>“Colouring Dübendorf: How resident participation shapes neighbourhood energy futures.” SSH Energy Workshop，蘇黎世聯邦理工學院，2026 年 6 月。海報。</li>
+          <li>“Wind energy in Switzerland: shaping future energy system with robust planning frameworks.” AlpEnForCe 2026，Disentis，2026 年 1 月。口頭報告。</li>
+          <li>“Regional energy system planning in Switzerland and the potential to integrate the social aspect.” SSH Energy Workshop，蘇黎世，2024 年 6 月。口頭報告。</li>
+          <li>“ehubX: energy system model tool with platform-based design.” Open Energy Modelling Initiative，格勒諾布爾，2024 年 3 月。口頭報告。</li>
+          <li>“South West energy system and the floating offshore wind integration.” Cornwall Future Energy Demand Challenge 成果發表活動，Penryn，2022 年 11 月。</li>
+          <li>“Assessment of the pathways to integrate floating offshore wind to the energy system.” 第 9 屆 PRIMaRE 研討會，Penryn，2022 年 7 月。</li>
+          <li>“Energy systems transition to net zero: from UK’s pathways to see the challenges and opportunities for Taiwan.” Future Earth Taipei/France Series，2022 年 7 月。邀請演講。</li>
+          <li>“The integration of wind power and energy storage.” Net Zero Heroes Post Doc Appreciation Week，2021 年 9 月。邀請演講。</li>
+          <li>“Concept of offshore direct wind-to-heat system integrated with thermal energy storage for decarbonizing heating.” Offshore Energy and Storage Summit，布雷斯特，2019 年 7 月。</li>
+          <li>“The value of thermal energy storage in decarbonizing the electricity industry.” UK Energy Storage Conference，紐卡索，2018 年 3 月。海報。</li>
+        </ul>
+      </section>
+
+      <section class="section" id="supervision" aria-labelledby="supervision-title">
+        <h2 class="section-title" id="supervision-title">指導與輔導</h2>
+        <h3 class="subheading">2026</h3>
+        <ul class="compact-list">
+          <li>Lele Gao，碩士論文，蘇黎世聯邦理工學院：System Integration and Optimization of Wind Energy Potentials in Switzerland。</li>
+          <li>Kim Bühler，碩士論文，蘇黎世聯邦理工學院：How the projected cryosphere-driven changes in seasonal hydropower inflows affect Switzerland's energy system。</li>
+          <li>Janis Hofmänner，學士論文，蘇黎世聯邦理工學院：Compressed air energy storage (CAES) in the Swiss energy system。</li>
+        </ul>
+        <h3 class="subheading">2025</h3>
+        <ul class="compact-list">
+          <li>Strobl Tristan，碩士論文，蘇黎世聯邦理工學院：Enhanced power plant flexibility through Bitcoin mining。</li>
+          <li>Ebi Laurenz，學士論文，蘇黎世聯邦理工學院：Design and Integration of an Enhanced Wind Power Representation for Energy System Optimization。</li>
+          <li>Elena Buchinger，碩士論文，維也納農業大學 (BOKU)：Clustering Wind Regimes to Derive Representative Wind Profiles for Energy System Modelling in Switzerland。</li>
+        </ul>
+        <h3 class="subheading">2024</h3>
+        <ul class="compact-list">
+          <li>Raoui Youssef，碩士學期專案，蘇黎世聯邦理工學院：Wind Energy Evaluation and Integration to the Swiss Energy System Model。</li>
+          <li>Matthias Vogt，碩士論文，蘇黎世聯邦理工學院：Advancing Net-Zero Strategies for Urban Energy Districts Using Energy System Optimization。</li>
+          <li>Flurin Soler，碩士學期專案，蘇黎世聯邦理工學院：Investigation of Near-Optimal Solutions for Building Retrofit and Portfolio Optimization。</li>
+        </ul>
+        <h3 class="subheading">替代役人員</h3>
+        <ul class="compact-list">
+          <li>Kevin Kuwegu：建模資料蒐集與分析。</li>
+          <li>Tycho Noah Frei：MOTEL 網路平台與 ehubX 測試。</li>
+          <li>Francesco Albisetti：LLM 資料擷取。</li>
+        </ul>
+      </section>
+
+      <section class="section" id="awards" aria-labelledby="awards-title">
+        <h2 class="section-title" id="awards-title">獎項與肯定</h2>
+        <ul class="compact-list">
+          <li>海報發表獎，UK Energy Storage Conference，紐卡索，2018。</li>
+          <li>特別獎，應用材料公司能源與環境解決方案事業部，2014 與 2015 年，表彰新產品導入，以及在評估首部高產能太陽能電池 Solion XP 離子佈植機中的關鍵角色。為該事業部第一位連續兩年獲獎的員工。</li>
+          <li>Wellan-System 獎學金，元智大學，2007，因在 53 位學生中排名第二 (GPA 3.94/4.0)。</li>
+        </ul>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <h2 class="section-title" id="skills-title">技能、語言與國際經驗</h2>
+        <div class="skills-grid">
+          <strong>建模與最佳化</strong><span>CESAR-P、ehubX、MANGO、PyPSA</span>
+          <strong>程式設計與運算</strong><span>C、C++、Python、高效能運算</span>
+          <strong>資料與 AI</strong><span>大型實測能源資料集、LLM 輔助資料處理流程、FAIR 資料描述</span>
+          <strong>華語</strong><span>母語</span>
+          <strong>英語</strong><span>專業</span>
+          <strong>台語</strong><span>中等</span>
+          <strong>德語</strong><span>基礎 (A2)</span>
+          <strong>國際經驗</strong><span>台灣 (至 2015)、英國 (2016–2023)、瑞士 (2023 年起)</span>
+        </div>
+      </section>
+
+      <footer class="cv-footer">
+        <span>Yi-Chung Barton Chen · 學術履歷</span>
+        <a href="index.html">簡易個人頁與連結</a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

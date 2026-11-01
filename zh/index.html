@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f1614">
-  <meta name="description" content="Links and profiles for Yi-Chung Barton Chen, energy systems researcher at Empa.">
-  <title>Yi-Chung Barton Chen — Links</title>
+  <meta name="description" content="Yi-Chung Barton Chen 的個人連結與檔案。Empa 能源系統研究員。">
+  <title>Yi-Chung Barton Chen</title>
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="alternate" hreflang="zh-Hant" href="./">
   <style>
     :root {
       color-scheme: dark;
@@ -21,8 +23,8 @@
       --tint: #1d2f2a;
       --ring: #6fbfa6;
       --line-strong: #3a4f48;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      --serif: Georgia, "Times New Roman", "Noto Serif TC", "PMingLiU", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -129,6 +131,15 @@
     .link-detail { color: var(--muted); font-size: 11px; }
     .arrow { color: var(--accent); font-size: 17px; }
 
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0 18px;
+      font-size: 12px;
+    }
+
+    .lang-switch a { color: var(--accent-dark); text-underline-offset: 4px; }
+
     .cv-link {
       margin-top: 21px;
       color: var(--accent-dark);
@@ -160,23 +171,24 @@
 </head>
 <body>
   <main>
-    <div class="monogram"><img src="images/Barton_glacier.jpg" alt="Barton Chen" decoding="async"></div>
-    <p class="eyebrow">Energy systems · Open research</p>
+    <p class="lang-switch"><a href="../" hreflang="en" lang="en">English</a></p>
+    <div class="monogram"><img src="../images/Barton_glacier.jpg" alt="Barton Chen" decoding="async"></div>
+    <p class="eyebrow">能源系統 · 開放研究</p>
     <h1>Yi-Chung<br>Barton Chen</h1>
-    <p class="subtitle">Scientist for Energy Systems Modelling · Empa</p>
-    <p class="intro">I work on energy modelling, open data and AI-ready tools for the transition to low-carbon energy systems.</p>
+    <p class="subtitle">能源系統建模科學家 · Empa</p>
+    <p class="intro">我從事能源建模、開放資料與 AI-ready 工具的研究，協助邁向低碳能源系統的轉型。</p>
 
-    <nav class="links" aria-label="Profile links">
+    <nav class="links" aria-label="個人連結">
       <a class="link-card" href="https://github.com/BartonChenTW" target="_blank" rel="noopener noreferrer">
-        <span class="link-copy"><span class="link-title">GitHub</span><span class="link-detail">Code and open projects</span></span>
+        <span class="link-copy"><span class="link-title">GitHub</span><span class="link-detail">程式碼與開放專案</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a class="link-card" href="https://www.linkedin.com/in/bartonchen/" target="_blank" rel="noopener noreferrer">
-        <span class="link-copy"><span class="link-title">LinkedIn</span><span class="link-detail">Professional profile</span></span>
+        <span class="link-copy"><span class="link-title">LinkedIn</span><span class="link-detail">專業檔案</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a class="link-card" href="https://www.empa.ch/web/chyi" target="_blank" rel="noopener noreferrer">
-        <span class="link-copy"><span class="link-title">Empa</span><span class="link-detail">Researcher profile</span></span>
+        <span class="link-copy"><span class="link-title">Empa</span><span class="link-detail">研究人員頁面</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a class="link-card" href="https://orcid.org/0000-0002-1446-5840" target="_blank" rel="noopener noreferrer">
@@ -184,24 +196,24 @@
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a class="link-card" href="mailto:barton.chen.energy@gmail.com">
-        <span class="link-copy"><span class="link-title">Email</span><span class="link-detail">barton.chen.energy@gmail.com</span></span>
+        <span class="link-copy"><span class="link-title">電子郵件</span><span class="link-detail">barton.chen.energy@gmail.com</span></span>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
       <a class="link-card" href="https://bartonchentw.github.io/FM4UES" target="_blank" rel="noopener noreferrer">
-        <span class="link-copy"><span class="link-title">Foundation models for urban energy systems</span><span class="link-detail">Open living review</span></span>
+        <span class="link-copy"><span class="link-title">都市能源系統的基礎模型</span><span class="link-detail">開放式持續更新文獻回顧</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a class="link-card" href="https://bartonchentw.github.io/Swiss-energy-system-data" target="_blank" rel="noopener noreferrer">
-        <span class="link-copy"><span class="link-title">Swiss energy system data</span><span class="link-detail">Open data collection</span></span>
+        <span class="link-copy"><span class="link-title">瑞士能源系統資料</span><span class="link-detail">開放資料集合</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
     </nav>
 
-    <p><a class="cv-link" href="index.html">View my academic CV →</a></p>
+    <p><a class="cv-link" href="academic.html">查看我的學術履歷 →</a></p>
   </main>
   <footer>
     <span>© 2026 Yi-Chung Barton Chen</span>
-    <a href="index.html">Academic CV</a>
+    <a href="academic.html">學術履歷</a>
   </footer>
 </body>
 </html>
