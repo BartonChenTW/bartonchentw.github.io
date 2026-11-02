@@ -91,15 +91,24 @@
     }
 
     .portrait {
-      display: block;
       width: 100%;
       max-width: 220px;
       aspect-ratio: 4 / 5;
       margin-bottom: 18px;
+      overflow: hidden;
       border: 1px solid var(--line-strong);
       border-radius: 6px;
+    }
+
+    /* Photo is a wide landscape shot: crop to the right side and zoom in on the head and shoulders. */
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: 90% 50%;
+      transform: scale(2.2);
+      transform-origin: 55% 45%;
     }
 
     .sidebar-name {
@@ -318,7 +327,7 @@
 
   <div class="page">
     <aside class="sidebar" aria-label="聯絡方式與頁面導覽">
-      <img class="portrait" src="../images/Barton_glacier.jpg" alt="Barton Chen 陳奕仲 站在阿萊奇冰川前" width="880" height="1100" decoding="async">
+      <div class="portrait"><img src="../images/Barton_glacier.jpg" alt="Barton Chen 陳奕仲 站在阿萊奇冰川前" width="880" height="1100" decoding="async"></div>
       <p class="sidebar-name">Barton Chen 陳奕仲</p>
       <p class="sidebar-role">能源系統建模科學家<br>Empa · 瑞士</p>
       <ul class="contact-list">
