@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1614">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Where visits to Barton Chen's sites are counted, and how to read the numbers.">
+  <title>Visitor counting — Barton Chen</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --paper: #0f1614;
+      --surface: #172220;
+      --ink: #e4ebe8;
+      --muted: #98a8a3;
+      --line: #2a3834;
+      --accent: #6fbfa6;
+      --accent-dark: #8fd1ba;
+      --ring: #6fbfa6;
+      --line-strong: #3a4f48;
+      --good: #6fbfa6;
+      --todo: #e0b45a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 15px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-dark); text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+
+    main {
+      width: min(720px, calc(100% - 40px));
+      margin: 0 auto;
+      padding-block: 56px 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 { margin: 0 0 14px; font: 400 32px/1.15 var(--serif); }
+    h2 { margin: 40px 0 14px; font: 400 21px/1.25 var(--serif); }
+    p { margin: 0 0 12px; }
+    .lede { color: var(--muted); }
+
+    .sites { display: grid; gap: 12px; }
+
+    .site {
+      display: grid;
+      gap: 6px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--surface);
+    }
+
+    .site-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 14px; }
+    .site-name { font-size: 15px; font-weight: 650; }
+
+    .status {
+      padding: 1px 9px;
+      border: 1px solid currentColor;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 650;
+    }
+
+    .status.on { color: var(--good); }
+    .status.off { color: var(--todo); }
+
+    .meta { color: var(--muted); font-size: 13px; }
+    .meta code, li code { font: 12.5px ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+    .links { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 13px; }
+
+    ul { margin: 0 0 12px; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+
+    .note {
+      padding: 14px 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      width: min(720px, calc(100% - 40px));
+      margin: 0 auto;
+      padding-block: 18px 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Site notes</p>
+    <h1>Visitor counting</h1>
+    <p class="lede">Summary of where visits to my sites are counted, what is recorded, and where to read the numbers. It does not show live figures: the dashboards are private, so open them while logged in to GoatCounter.</p>
+
+    <h2>Sites</h2>
+    <div class="sites">
+      <section class="site" aria-labelledby="s-fm4ues">
+        <div class="site-head"><span class="site-name" id="s-fm4ues">FM4UES</span><span class="status on">Counting since 2026-10-20</span></div>
+        <p class="meta">Foundation models for urban energy systems, an open living review. Site code <code>fm4ues</code>.</p>
+        <div class="links">
+          <a href="https://fm4ues.goatcounter.com" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
+          <a href="https://bartonchentw.github.io/FM4UES/" target="_blank" rel="noopener noreferrer">Site ↗</a>
+        </div>
+      </section>
+
+      <section class="site" aria-labelledby="s-swiss">
+        <div class="site-head"><span class="site-name" id="s-swiss">Swiss energy system data</span><span class="status on">Counting since 2026-10-20</span></div>
+        <p class="meta">Open collection of Swiss energy system data. Site code <code>swiss-energy-system-data</code>. Shows page views and visitor countries.</p>
+        <div class="links">
+          <a href="https://swiss-energy-system-data.goatcounter.com" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
+          <a href="https://bartonchentw.github.io/Swiss-energy-system-data/" target="_blank" rel="noopener noreferrer">Site ↗</a>
+        </div>
+      </section>
+
+      <section class="site" aria-labelledby="s-profile">
+        <div class="site-head"><span class="site-name" id="s-profile">This profile site</span><span class="status off">Not counted yet</span></div>
+        <p class="meta">The simple profile, the academic CV and their Chinese versions. No counter is installed here, so visits to these pages are not recorded.</p>
+        <div class="links">
+          <a href="https://bartonchentw.github.io/" target="_blank" rel="noopener noreferrer">Site ↗</a>
+        </div>
+      </section>
+    </div>
+
+    <h2>What is recorded</h2>
+    <ul>
+      <li>One page view per page load, per page path.</li>
+      <li>Visitor country, as reported by GoatCounter, plus referrer, browser and screen size in its standard reports.</li>
+      <li>No cookies and no tracking of individual visitors. Local previews are not counted.</li>
+    </ul>
+
+    <h2>Reading the numbers</h2>
+    <ul>
+      <li>Log in at <a href="https://www.goatcounter.com/" target="_blank" rel="noopener noreferrer">goatcounter.com</a>, then open the dashboard of the site you want.</li>
+      <li>A page view is not a person. The same visitor can add several views, and visitors who block scripts are missed.</li>
+      <li>The public “N views” counter is off. The counter address answers 403 until “Allow using the visitor counter” is switched on in each site’s GoatCounter settings. FM4UES already has the code ready and shows the count once it is.</li>
+    </ul>
+
+    <h2>Counting this site too</h2>
+    <p class="note">Create a GoatCounter site (for example <code>bartonchentw</code>) and add one line to each page: <code>&lt;script data-goatcounter="https://bartonchentw.goatcounter.com/count" async src="https://gc.zgo.at/count.js"&gt;&lt;/script&gt;</code>. It belongs on all four pages, English and Chinese.</p>
+  </main>
+  <footer>
+    <a href="./">Back to profile</a>
+  </footer>
+</body>
+</html>
