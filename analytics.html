@@ -98,6 +98,10 @@
       font-size: 14px;
     }
 
+    .count { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; font-size: 13px; color: var(--muted); }
+    .count strong { color: var(--ink); font: 400 26px/1.2 var(--serif); font-variant-numeric: tabular-nums; }
+    .count.off { color: var(--todo); }
+
     footer {
       width: min(720px, calc(100% - 40px));
       margin: 0 auto;
@@ -112,25 +116,47 @@
   <main>
     <p class="eyebrow">Site notes</p>
     <h1>Visitor counting</h1>
-    <p class="lede">Summary of where visits to my sites are counted, what is recorded, and where to read the numbers. It does not show live figures: the dashboards are private, so open them while logged in to GoatCounter.</p>
+    <p class="lede">Summary of where visits to my sites are counted, what is recorded, and where to read the numbers. The totals below are read live from GoatCounter each time you open the page. Full reports, such as countries and top pages, are in the dashboards, which need a GoatCounter login.</p>
 
     <h2>Sites</h2>
     <div class="sites">
-      <section class="site" aria-labelledby="s-fm4ues">
-        <div class="site-head"><span class="site-name" id="s-fm4ues">FM4UES</span><span class="status on">Counting since 2026-10-20</span></div>
+      <section class="site" aria-labelledby="s-fm4ues" data-code="fm4ues">
+        <div class="site-head"><span class="site-name" id="s-fm4ues">FM4UES</span><span class="status on">Counted</span></div>
         <p class="meta">Foundation models for urban energy systems, an open living review. Site code <code>fm4ues</code>.</p>
+        <p class="count" aria-live="polite">Loading views…</p>
         <div class="links">
           <a href="https://fm4ues.goatcounter.com" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
           <a href="https://bartonchentw.github.io/FM4UES/" target="_blank" rel="noopener noreferrer">Site ↗</a>
         </div>
       </section>
 
-      <section class="site" aria-labelledby="s-swiss">
-        <div class="site-head"><span class="site-name" id="s-swiss">Swiss energy system data</span><span class="status on">Counting since 2026-10-20</span></div>
-        <p class="meta">Open collection of Swiss energy system data. Site code <code>swiss-energy-system-data</code>. Shows page views and visitor countries.</p>
+      <section class="site" aria-labelledby="s-swiss" data-code="swiss-energy-system-data">
+        <div class="site-head"><span class="site-name" id="s-swiss">Swiss energy system data</span><span class="status on">Counted</span></div>
+        <p class="meta">Open collection of Swiss energy system data. Site code <code>swiss-energy-system-data</code>.</p>
+        <p class="count" aria-live="polite">Loading views…</p>
         <div class="links">
           <a href="https://swiss-energy-system-data.goatcounter.com" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
           <a href="https://bartonchentw.github.io/Swiss-energy-system-data/" target="_blank" rel="noopener noreferrer">Site ↗</a>
+        </div>
+      </section>
+
+      <section class="site" aria-labelledby="s-taiwan" data-code="taiwan-energy-system-platform">
+        <div class="site-head"><span class="site-name" id="s-taiwan">Taiwan energy system model</span><span class="status on">Counted</span></div>
+        <p class="meta">Taiwan data, scenarios and website, built on PyPSA-Earth. Site code <code>taiwan-energy-system-platform</code>.</p>
+        <p class="count" aria-live="polite">Loading views…</p>
+        <div class="links">
+          <a href="https://taiwan-energy-system-platform.goatcounter.com" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
+          <a href="https://bartonchentw.github.io/taiwan-energy-model/" target="_blank" rel="noopener noreferrer">Site ↗</a>
+        </div>
+      </section>
+
+      <section class="site" aria-labelledby="s-game" data-code="grid-balancing-game">
+        <div class="site-head"><span class="site-name" id="s-game">Follow the Load, grid balancing game</span><span class="status on">Counted</span></div>
+        <p class="meta">Free browser game about keeping Taiwan’s grid at 60 Hz. Site code <code>grid-balancing-game</code>.</p>
+        <p class="count" aria-live="polite">Loading views…</p>
+        <div class="links">
+          <a href="https://grid-balancing-game.goatcounter.com" target="_blank" rel="noopener noreferrer">Dashboard ↗</a>
+          <a href="https://bartonchentw.github.io/grid-balancing-game/" target="_blank" rel="noopener noreferrer">Site ↗</a>
         </div>
       </section>
 
@@ -154,7 +180,7 @@
     <ul>
       <li>Log in at <a href="https://www.goatcounter.com/" target="_blank" rel="noopener noreferrer">goatcounter.com</a>, then open the dashboard of the site you want.</li>
       <li>A page view is not a person. The same visitor can add several views, and visitors who block scripts are missed.</li>
-      <li>The public “N views” counter is off. The counter address answers 403 until “Allow using the visitor counter” is switched on in each site’s GoatCounter settings. FM4UES already has the code ready and shows the count once it is.</li>
+      <li>Each total is all-time page views for the whole site, and the unique figure is GoatCounter’s own estimate. A site shows “Counter is private” until “Allow using the visitor counter” is switched on in its GoatCounter settings.</li>
     </ul>
 
     <h2>Counting this site too</h2>
@@ -163,5 +189,22 @@
   <footer>
     <a href="./">Back to profile</a>
   </footer>
+  <script>
+    // GoatCounter's public counter: TOTAL.json answers for the whole site once the visitor counter is allowed in its settings.
+    document.querySelectorAll(".site[data-code]").forEach(function (card) {
+      var out = card.querySelector(".count");
+      var url = "https://" + card.dataset.code + ".goatcounter.com/counter/TOTAL.json";
+      fetch(url)
+        .then(function (r) { if (!r.ok) { throw new Error(r.status); } return r.json(); })
+        .then(function (d) {
+          var n = Number(d.count), u = Number(d.count_unique);
+          out.innerHTML = "<strong>" + n.toLocaleString("en") + "</strong> views, " + u.toLocaleString("en") + " unique";
+        })
+        .catch(function () {
+          out.classList.add("off");
+          out.textContent = "Counter is private. Switch on “Allow using the visitor counter” in GoatCounter settings.";
+        });
+    });
+  </script>
 </body>
 </html>
